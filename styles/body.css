@@ -1,0 +1,74 @@
+:root {
+  --blue: #2926c9;
+  --gold: #ffbb3a;
+  --bg-gray: #e8e8e8;
+}
+* {
+  font-family: "Righteous", cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgb(27, 25, 20);
+}
+footer {
+  border-top: 2px solid var(--gold);
+  background-color: aliceblue;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 30px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+.social-icons {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+footer img {
+  width: 25px;
+  margin-right: 5px;
+  align-items: center;
+  align-content: center;
+}
+footer label {
+  font-size: 1.2rem;
+  color: var(--gold);
+  text-align: center;
+}
+#counter {
+  opacity: 0%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  width: 100%;
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+#counter.gameStarted {
+  opacity: 100%;
+}
+
+@media (max-width: 480px) {
+  #counter {
+    font-size: 0.9rem;
+  }
+  footer img {
+    width: 20px;
+    margin-right: 5px;
+  }
+  footer label {
+    font-size: 1rem;
+  }
+}

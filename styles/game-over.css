@@ -1,0 +1,35 @@
+#gameOver {
+  position: absolute;
+  width: 70%;
+  height: 40%;
+  background-color: #020092;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  text-align: center;
+  z-index: 5;
+  border-radius: 20px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.45);
+}
+#congratulations {
+  font-size: 3.5rem;
+  color: var(--gold);
+}
+
+@media (max-width: 480px) {
+  #gameOver {
+    width: 95%;
+    height: 20%;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
+  }
+  #congratulations {
+    font-size: 1.4rem;
+  }
+}

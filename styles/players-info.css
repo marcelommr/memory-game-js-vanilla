@@ -1,0 +1,56 @@
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 2px solid var(--gold);
+  background-color: #e8e8e8;
+  width: 100%;
+  padding: 10px;
+}
+#playerName,
+#start,
+#askName,
+#errorMsg {
+  font-size: 1.2rem;
+  margin: 3px;
+}
+#askName {
+  font-size: 1.5rem;
+  color: var(--gold);
+  text-shadow: 1px 1px 2px black;
+}
+#errorMsg {
+  color: RED;
+  opacity: 0%;
+  transition: 500ms;
+}
+#errorMsg.empty-value {
+  opacity: 100%;
+}
+#playerName {
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--blue);
+}
+
+@media (max-width: 480px) {
+  #playerName,
+  #start,
+  #askName,
+  #errorMsg {
+    font-size: 1rem;
+    margin: 3px;
+  }
+  #playerName {
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--blue);
+  }
+  #askName {
+    font-size: 1rem;
+    color: var(--gold);
+    text-shadow: 1px 1px 2px black;
+  }
+}

@@ -1,0 +1,83 @@
+#ranking {
+  position: absolute;
+  width: 60%;
+  max-height: 60%;
+  background-color: #020092;
+  text-shadow: 1px 1px 2px black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  text-align: center;
+  z-index: 5;
+  border-radius: 20px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.45);
+  overflow-y: scroll;
+}
+#rankTitle {
+  color: var(--gold);
+  text-shadow: 1px 1px 2px black;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+.records {
+  width: 90%;
+  user-select: none;
+  color: white;
+  margin-top: 10px;
+}
+.records tr {
+  background-color: white;
+}
+.records th {
+  height: 40px;
+  padding-left: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #020092;
+}
+.records td {
+  height: 30px;
+  font-size: 1.4rem;
+  color: var(--gold);
+  text-align: center;
+  padding-left: 20px;
+}
+.records th:last-child,
+.records td:last-child {
+  padding: 0;
+  min-width: 140px;
+  text-align: center;
+}
+.records tr:hover {
+  background-color: wheat;
+}
+
+@media (max-width: 480px) {
+  #ranking {
+    width: 95%;
+    border-radius: 10px;
+  }
+  #rankTitle {
+    font-size: 1.8rem;
+    margin-top: 5px;
+  }
+  .records {
+    margin-top: none;
+  }
+  .records th {
+    height: 30px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    text-align: left;
+    background-color: #020092;
+  }
+  .records td {
+    height: 25px;
+    font-size: 1rem;
+    color: var(--gold);
+    text-align: left;
+    padding-left: 20px;
+  }
+}

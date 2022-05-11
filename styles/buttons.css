@@ -1,0 +1,121 @@
+button {
+  cursor: pointer;
+}
+.buttons {
+  background-color: var(--blue);
+  color: var(--gold);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.45);
+  font-size: 1.2rem;
+  border: none;
+}
+.buttons:hover {
+  background-color: #020092;
+  color: #bc8d35;
+}
+.buttons:active {
+  background-color: #020092;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  transform: translateY(4px);
+}
+#startButtonMobile {
+  display: none;
+}
+#rankingButtonMobile {
+  display: none;
+}
+#back {
+  padding: 15px;
+  font-size: 20px;
+  background-color: var(--gold);
+  border: none;
+  border-radius: 10px;
+  color: var(--blue);
+  margin-top: 10px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.45);
+}
+#back:hover {
+  background-color: #bc8d35;
+  color: #020092;
+}
+#back:active {
+  background-color: #bc8d35;
+  color: #020092;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  transform: translateY(4px);
+}
+#backFromRanking {
+  padding: 8px;
+  font-size: 1.1rem;
+  background-color: var(--gold);
+  border: none;
+  border-radius: 5px;
+  color: var(--blue);
+  margin: 10px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.45);
+}
+#backFromRanking:hover {
+  background-color: #bc8d35;
+  color: #020092;
+}
+#backFromRanking:active {
+  background-color: #bc8d35;
+  color: #020092;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  transform: translateY(4px);
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
+    font-size: 1rem;
+    border: none;
+    margin-right: 5px;
+  }
+  .buttons:active {
+    background-color: #020092;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+    transform: translateY(2px);
+  }
+  #buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  #startButton {
+    display: none;
+  }
+  #startButtonMobile {
+    display: flex;
+  }
+  #rankingButton {
+    display: none;
+  }
+  #rankingButtonMobile {
+    display: flex;
+  }
+  #backFromRanking {
+    padding: 5px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.45);
+  }
+  #backFromRanking:active {
+    transform: translateY(2px);
+  }
+  #back {
+    padding: 5px;
+    font-size: 0.8rem;
+    background-color: var(--gold);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.45);
+  }
+  #back:active {
+    transform: translateY(2px);
+  }
+}

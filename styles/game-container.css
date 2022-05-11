@@ -1,0 +1,106 @@
+#game-container {
+    transform: translateY(17px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 500ms;
+    height: 100%;
+    width: 70%;
+  }
+  #title {
+    width: 100%;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 8px 1px black;
+    z-index: 2;
+  }
+  #title h1 {
+    font-size: 2.5rem;
+    color: var(--gold);
+    text-shadow: 1px 1px 2px black;
+  }
+  #game-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-gray);
+    width: 100%;
+    height: 100%;
+  }
+  .card {
+    width: 85px;
+    height: 85px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  .card img {
+    width: 80%;
+  }
+  .card_back,
+  .card_front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+    /* All inverted faces become hidden.*/
+    transform: rotateX(0deg);
+  }
+  .flip {
+    transform: rotateY(180deg);
+    cursor: not-allowed;
+  }
+  .card_front {
+    background-color: #101c2c;
+    transform: rotateY(180deg);
+  }
+  .card_back {
+    color: var(--gold);
+    background-color: var(--blue);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .card_back:hover {
+    background-color: #020092;
+  }
+  #gameBoard {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr;
+    gap: 11px;
+  }
+
+@media (max-width: 480px){
+ #game-container{
+  height: 100vh;
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+ #title h1 {
+  font-size: 1.5rem;
+}
+.card {
+  width: 60px;
+  height: 60px;
+}
+.card_back,
+.card_front {
+border-radius: 10px;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.45);
+}
+#gameBoard {
+  grid-template: 1fr 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  gap: 12px;
+}
+}

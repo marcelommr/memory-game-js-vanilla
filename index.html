@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/body.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/ranking.css" type="text/css">
+    <link rel="stylesheet" href="styles/buttons.css" type="text/css">
+    <link rel="stylesheet" href="styles/players-info.css" type="text/css">
+    <link rel="stylesheet" href="styles/game-container.css" type="text/css">
+    <link rel="stylesheet" href="styles/game-over.css" type="text/css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/images/Favicon.png" type="image/x-icon">
+    <title>Magno Guedes' Memory Game</title>
+  </head>
+
+  <body>
+
+    <div id="gameOver">
+        <div>
+            <h1 id="congratulations"></h1>
+            <p id="finalMovesQuantity"></p>
+        </div>
+        <button id="back" onclick="back()">Back</button>
+    </div>
+    <div id="ranking">
+      <h1 id="rankTitle">Top Local Players</h1>
+      <table id="tableRanking" class="records">
+        <thead>
+          <tr>
+            <th>#Position</th>
+            <th>Player</th>
+            <th>Moves</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <button id="backFromRanking" onclick="backFromRanking()">Back</button>
+    </div>
+    <div id="audio">
+      <audio  id="song" src="assets/music/BackgroundMusic1.mp3"></audio>
+      <audio id="flipSound" src="assets/music/Card-flip-sound-effect.mp3"></audio>
+      <audio id="gameOverSound" src="assets/music/Game-show-winning.mp3"></audio>
+      <audio id="matchSound" src="assets/music/Match-sound.mp3"></audio>
+    </div>
+    <main id="game-container">
+        <div id="title">
+            <h1>Memory Game</h1>
+        </div>
+        
+            <div id="game-content">
+              <div id="counter">
+                <label id="moves"></label></div>
+                <div id="gameBoard">
+                      </div>
+                </div>
+                        <div id="info">
+                          <label for="" id="askName">Enter your name:</label>
+                          <input
+                type="text"
+                id="playerName"
+                placeholder="Your Name"
+                maxlength="9"
+                          />
+                          <p id="errorMsg">Please, enter your name.</p>
+                          <div id="buttons">
+                            <button id="startButton" class="buttons" onclick="sendPlayersInfo()">Save and Start</button>
+                            <button id="startButtonMobile" class="buttons" onclick="sendPlayersInfo()">Save</button>
+                            <button id="eraseDataButton" class="buttons" onclick="eraseData()">Erase Data</button>
+                            <button id="rankingButton" class="buttons" onclick="showRanking()">Local Ranking</button>
+                            <button id="rankingButtonMobile" class="buttons" onclick="showRanking()">Ranking</button>
+                          </div>
+                        </div>
+            </div>
+
+        <footer>
+          <div class="social-icons">
+            <a href="https://github.com/moguedes"
+              ><img src="assets/images/GitHub.png" alt="GitHubLogo"
+            /></a>
+            <a href="https://www.instagram.com/_magnoguedes/"
+              ><img src="assets/images/instagram.png" alt="InstagramLogo"
+            /></a>
+            <label for="">By Magno Otávio Guedes</label>
+          </div>
+        </footer>
+    </main>
+
+    <script src="scripts/game.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
